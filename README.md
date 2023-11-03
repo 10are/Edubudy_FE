@@ -1,1 +1,1 @@
-# YKSMate_FE
+# EduBudy
