@@ -1,0 +1,44 @@
+{
+  "cards": [
+    {
+      "title": "Card 1",
+      "description": "Bu dersi anlatabilirim isteyenelere.",
+      "lesson": "Matematik",
+      "topic": "Toplama",
+      "image": "resim1.jpeg",
+      "username": "Ahmet"
+    },
+    {
+      "title": "Card 2",
+      "description": "Bu konuda çok iyiym.",
+      "lesson": "Fizik",
+      "topic": "Kuvvet",
+      "image": "resim2.jpeg",
+      "username": "Mehmet"
+    },
+    {
+      "title": "Card 3",
+      "description": "İsteyenlere ders anlatabilirim.",
+      "lesson": "Biyoloji",
+      "topic": "Hücre",
+      "image": "resim3.jpeg",
+      "username": "Ayşe"
+    },
+    {
+      "title": "Card 4",
+      "description": "Merhabalar, bu konuyu sizlere anlatabilirim.",
+      "lesson": "Tarih",
+      "topic": "Geometri",
+      "image": "resim4.jpeg",
+      "username": "Onur"
+    },
+    {
+      "title": "Card 5",
+      "description": "Bu bir açıklamadır.",
+      "lesson": "Kimya",
+      "topic": "Geometr,",
+      "image": "resim5.jpeg",
+      "username": "Onur"
+    }
+  ]
+}

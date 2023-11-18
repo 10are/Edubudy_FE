@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background-color: #1a1a1a; /* Siyah tonuna yakın kapalı bir renk */
+  color: white; /* Tüm yazılar beyaz renkte */
+}
+
+a {
+  color: #ff5722  ; /* Link renkleri beyaz */
+  text-decoration: none; /* Alt çizgi kaldırma */
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  color: inherit; /* Tüm başlık ve paragraf etiketleri ana renk (beyaz) alır */
+}
