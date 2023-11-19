@@ -13,8 +13,8 @@ function Index() {
     const isActive = activeButton === index;
 
     return {
-      backgroundColor: isActive ? 'black' : '#ff5722',
-      color: isActive ? '#FFA500' : 'white',
+      backgroundColor: isActive ? '#76FF03' : '#c56a25',
+      color: isActive ? 'black' : 'white',
       transform: isActive ? 'scale(1.05)' : 'scale(1)',
       fontSize: isActive ? '1.1em' : '1em',
     };
@@ -22,44 +22,43 @@ function Index() {
 
   return (
     <div>
-      <div className="container mx-auto my-8 p-6 bg-white dark:bg-gray-700 rounded-lg shadow-lg">
-        <div className="flex justify-center space-x-4">
+      <div className="container mx-auto my-8 p-  rounded-lg shadow-lg">
+        <div className="flex flex-col sm:flex-row justify-center sm:space-x-4">
           <Link href="/">
-              <button
-                style={getButtonStyle(0)}
-                className="transition-all duration-300 ease-in-out font-bold py-3 px-6 rounded-lg shadow-lg focus:outline-none"
-                onClick={() => handleButtonClick(0)}
-              >
-                Kategori 1
-              </button>
+            <button
+              style={getButtonStyle(0)}
+              className="transition-all duration-300 ease-in-out font-bold py-3 px-6 rounded-lg shadow-lg focus:outline-none mb-2 sm:mb-0"
+              onClick={() => handleButtonClick(0)}
+            >
+              DİNLE/ANLAT
+            </button>
           </Link>
           <Link href="/">
-            
-              <button
-                style={getButtonStyle(1)}
-                className="transition-all duration-300 ease-in-out font-bold py-3 px-6 rounded-lg shadow-lg focus:outline-none"
-                onClick={() => handleButtonClick(1)}
-              >
-                Kategori 2
-              </button>
+            <button
+              style={getButtonStyle(1)}
+              className="transition-all duration-300 ease-in-out font-bold py-3 px-6 rounded-lg shadow-lg focus:outline-none mb-2 sm:mb-0"
+              onClick={() => handleButtonClick(1)}
+            >
+              MESLEK ERBABI
+            </button>
           </Link>
           <Link href="/">
-              <button
-                style={getButtonStyle(2)}
-                className="transition-all duration-300 ease-in-out font-bold py-3 px-6 rounded-lg shadow-lg focus:outline-none"
-                onClick={() => handleButtonClick(2)}
-              >
-                Kategori 3
-              </button>
+            <button
+              style={getButtonStyle(2)}
+              className="transition-all duration-300 ease-in-out font-bold py-3 px-6 rounded-lg shadow-lg focus:outline-none mb-2 sm:mb-0"
+              onClick={() => handleButtonClick(2)}
+            >
+              KAFAM KARIŞIK
+            </button>
           </Link>
           <Link href="/">
-              <button
-                style={getButtonStyle(3)}
-                className="transition-all duration-300 ease-in-out font-bold py-3 px-6 rounded-lg shadow-lg focus:outline-none"
-                onClick={() => handleButtonClick(3)}
-              >
-                Kategori 4
-              </button>
+            <button
+              style={getButtonStyle(3)}
+              className="transition-all duration-300 ease-in-out font-bold py-3 px-6 rounded-lg shadow-lg focus:outline-none mb-2 sm:mb-0"
+              onClick={() => handleButtonClick(3)}
+            >
+              BURS FIRSATLARI
+            </button>
           </Link>
         </div>
       </div>
