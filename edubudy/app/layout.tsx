@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import { Teko } from 'next/font/google'
 import Navbar from './components/Navbar/Navbar.jsx'
-import Footer from './components/Footer/'
 import './globals.css'
+import { ReduxProviders } from './Redux/provider' 
+import Tab from './components/Tab/tab'
 
 const teko = Teko({ subsets: ['latin'] })
 
@@ -15,15 +16,17 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className={teko.className}>
       <body >
-        <Navbar />
-        <main> {children} </main>
         
-        {/* <Footer/> */}
+          <ReduxProviders>
+            <Navbar />
+            <Tab />
+            {children}
+          </ReduxProviders>
 
         </body>
     </html>
