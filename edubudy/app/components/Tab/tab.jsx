@@ -9,25 +9,36 @@ const links = [
   { name: 'BLOG', href: '/Features/eduMentor', icon: <RiArticleLine />, color: 'yellow' },
   { name: 'Meslek/Erbabı', href: '/Features/eduSocial', icon: <RiTeamLine />, color: 'red' },
 ];
+
 function Navbar() {
+  const [activeLink, setActiveLink] = useState(null);
 
-    return (
-      <div className="bg-slate-400 py-5 px-20 w-min mx-auto mt-8 rounded-lg">
-        <ul className="flex justify-center items-center space-x-20 text-lg">
-          {links.map((link, index) => (
-            <li key={index}>
+  const handleLinkClick = (index) => {
+    setActiveLink(index);
+  };
 
-                <Link className='border flex flex-col items-center ' href={link.href}>
-                  {React.cloneElement(link.icon, { className: `text-${link.color}-500 text-2xl` })}
-                  <span className={`mt-auto`}>{link.name}</span>
-                </Link>
- 
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
-  
-  export default Navbar;
+  return (
+    <div className="bg-slate-400 py-5 px-20 w-min mx-auto mt-8 rounded-lg">
+      <ul className="flex justify-center items-center space-x-20 text-lg">
+        {links.map((link, index) => (
+          <li key={index}>
+            <Link
+              className={`border flex flex-col items-center ${
+                activeLink === index ? 'text-white' : 'text-gray-500'
+              }`}
+              href={link.href}
+              onClick={() => handleLinkClick(index)}
+            >
+              {React.cloneElement(link.icon, { className: `text-${link.color}-500 text-2xl` })}
+              <span className={`mt-auto`}>{link.name}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default Navbar;
+
   
