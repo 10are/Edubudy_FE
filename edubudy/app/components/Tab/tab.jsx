@@ -18,7 +18,7 @@ function Navbar() {
   };
 
   return (
-    <div className="bg-gray-800 py-5 px-20 w-min mx-auto mt-8 rounded-lg "> 
+    <div className="bg-mainColor py-5 px-20 w-min mx-auto mt-8 rounded-lg "> 
       <ul className="flex justify-center items-center space-x-20 text-lg ">
         {links.map((link, index) => (
           <li key={index}>
