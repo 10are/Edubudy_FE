@@ -5,8 +5,8 @@ import { RiHeadphoneLine, RiUserVoiceLine, RiArticleLine, RiTeamLine } from 'rea
 
 const links = [
   { name: 'Dinle/Anlat', href: '/Features/eduCard', icon: <RiHeadphoneLine />, color: '#718096' }, // Gri tonları
-  { name: 'Kafam/Karışık', href: '/Features/eduBlog', icon: <RiUserVoiceLine />, color: '#90cdf4' }, // Mavi tonları
-  { name: 'BLOG', href: '/Features/eduMentor', icon: <RiArticleLine />, color: '#f6e05e' }, // Sarı tonları
+  { name: 'Kafam/Karışık', href: '/Features/eduMentor', icon: <RiUserVoiceLine />, color: '#90cdf4' }, // Mavi tonları
+  { name: 'BLOG', href: '/Features/eduBlog', icon: <RiArticleLine />, color: '#f6e05e' }, // Sarı tonları
   { name: 'Meslek/Erbabı', href: '/Features/eduSocial', icon: <RiTeamLine />, color: '#fc8181' }, // Kırmızı tonları
 ];
 
