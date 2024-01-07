@@ -19,7 +19,7 @@ const BlogPostUI:
     return <>
 
 
-        <div className="max-w-sm rounded-xl overflow-hidden shadow-sm shadow-white h-max">
+        <div className="container max-w-sm rounded-xl overflow-hidden shadow-sm shadow-white h-max">
             <img className="w-full" style={{height: "25%"}} src={imageUrl} alt="Sunset in the mountains"/>
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{title} </div>

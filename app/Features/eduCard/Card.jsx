@@ -10,7 +10,7 @@ const Cart = () => {
       "lesson": "Matematik",
       "topic": "Toplama",
       "image": "/resim1.jpeg",
-      "username": "Ahmet"
+      "username": "Ahmet123123"
     },
     {
       "title": "Biyoloji",
@@ -49,21 +49,30 @@ const Cart = () => {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row pt-8 pr-6 pl-6">
+    <div className="container mx-auto flex flex-col md:flex-row pt-8 pr-6 pl-6">
       <Filter />
-      <div className="flex-1 pl-4 ">
-        <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
+      <div className="flex-1 pl-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((card, index) => (
-            <div key={index} className="hover:scale-110 transition-transform border border-slate-500 hover:border-sky-600 duration-100 rounded-md overflow-hidden shadow-lg">
-              <img src={card.image} alt={card.title} className="w-full h-48 object-cover mb-4" />
+            <div
+              key={index}
+              className="group hover:shadow-lg rounded-md overflow-hidden border border-gray-300 hover:border-blue-500 transition duration-300"
+            >
+              <img
+                src={card.image}
+                alt={card.title}
+                className="w-full h-48 object-cover mb-4 transition duration-300 group-hover:scale-105"
+              />
               <div className="p-4">
-                <div className="flex  space-x-2 mb-2 font-semibold">
+                <div className="flex items-center space-x-2 mb-2 text-gray-500">
                   <BsPerson className="text-blue-500" />
                   <span>{card.username}</span>
                 </div>
-                <h2 className="text-lg font-semibold mb-2 ">{card.title}</h2>
-                <p className="text-gray-600 mb-2">{card.description}</p>          
-                <p className="text-blue-500 font-bold ">{`${card.lesson} - ${card.topic}`}</p>
+                <h2 className="text-lg font-semibold mb-2 group-hover:text-blue-500 transition duration-300">
+                  {card.title}
+                </h2>
+                <p className="text-gray-600 mb-2">{card.description}</p>
+                <p className="text-blue-500 font-bold mb-2">{`${card.lesson} - ${card.topic}`}</p>
               </div>
             </div>
           ))}
@@ -72,7 +81,7 @@ const Cart = () => {
           <button className="mr-2 p-2 border rounded-md">
             <BsChevronLeft />
           </button>
-          <span className="text-xl font-bold"></span>
+          <span className="text-xl font-bold">Page 1</span>
           <button className="ml-2 p-2 border rounded-md">
             <BsChevronRight />
           </button>
@@ -80,9 +89,11 @@ const Cart = () => {
       </div>
     </div>
   );
+  
 };
 
 export default Cart;
+
 
 
 
