@@ -1,8 +1,10 @@
 import React from 'react';
 import styles from './BlogPost.module.css';
 import {text} from "node:stream/consumers";
+import Link from "next/link";
 
 interface BlogPostProps {
+    id: number;
     title: string;
     category: string;
     tags: string[];
@@ -15,14 +17,16 @@ interface BlogPostProps {
 }
 
 const BlogPostUI:
-    React.FC<BlogPostProps> = ({title, category, commentCount ,author, content, tags, date, imageUrl, userImageUrl}) => {
+    React.FC<BlogPostProps> = ({id ,title, category, commentCount ,author, content, tags, date, imageUrl, userImageUrl}) => {
+
+
     return <>
-
-
         <div className="container max-w-sm rounded-xl overflow-hidden shadow-sm shadow-white h-max">
             <img className="w-full" style={{height: "25%"}} src={imageUrl} alt="Sunset in the mountains"/>
             <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{title} </div>
+                <div className="font-bold text-xl mb-2">
+                     <a href={"/eduBlogDetail/" + id} >{title}</a>
+                </div>
                 <div className="flex flex-row">
                     <div className="basis-1/3 font-black text-sm mb-2 ">{date} </div>
                     {/*<div className="basis-1/2 font-bold text-sm mb-2">@{author}</div>*/}

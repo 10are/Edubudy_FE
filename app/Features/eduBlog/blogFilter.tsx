@@ -12,7 +12,7 @@ function BlogFilter() {
         { label: 'Girilecek Sınav', options: ['Option 1', 'Option 2', 'Option 3'] },
       ];
     return <>
-        <div className="p-4 w-auto md:w-1/6 bg-mainColor text-white overflow-y-auto max-h-screen">
+        <div className="p-4 w-full max-w-xs mx-auto bg-mainColor rounded-lg shadow-md">
             <h1 className="text-2xl font-bold mb-4">Filtreleme</h1>
             <form>
                 <div>
